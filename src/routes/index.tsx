@@ -30,7 +30,7 @@ function Enlistment() {
   const { profile, setProfile, setEnlisted } = useSarge();
   const [i, setI] = useState(0);
   const navigate = useNavigate();
-  const s = STEPS[i];
+  const s = STEPS[i]!;
   const set = (v: string | number) => setProfile({ ...profile, [s.key]: v });
   const next = () => {
     if (i < STEPS.length - 1) setI(i + 1);

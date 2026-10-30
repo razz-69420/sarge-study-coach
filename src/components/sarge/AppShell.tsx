@@ -79,10 +79,10 @@ export function AppShell({ children }: { children: ReactNode }) {
             ))}
           </div>
           {step > 0 && (
-            <button onClick={() => navigate({ to: DEMO_ORDER[step - 1] })} className="text-xs text-muted-foreground hover:text-foreground">Back</button>
+            <button onClick={() => navigate({ to: DEMO_ORDER[step - 1]! })} className="text-xs text-muted-foreground hover:text-foreground">Back</button>
           )}
           {step < DEMO_ORDER.length - 1 ? (
-            <button onClick={() => navigate({ to: DEMO_ORDER[step + 1] })} className="rounded bg-primary px-3 py-1.5 text-xs font-bold uppercase text-primary-foreground">Next</button>
+            <button onClick={() => navigate({ to: DEMO_ORDER[step + 1]! })} className="rounded bg-primary px-3 py-1.5 text-xs font-bold uppercase text-primary-foreground">Next</button>
           ) : (
             <button onClick={() => setDemoActive(false)} className="rounded bg-primary px-3 py-1.5 text-xs font-bold uppercase text-primary-foreground">Finish</button>
           )}

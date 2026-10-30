@@ -42,7 +42,7 @@ function QuizPage() {
     );
   }
 
-  const q = QUESTIONS[i];
+  const q = QUESTIONS[i]!;
   const lock = () => {
     if (choice === null || conf === null) return;
     const a: Answer = { qid: q.id, topic: q.topic, choice, confidence: conf, correct: choice === q.correct };

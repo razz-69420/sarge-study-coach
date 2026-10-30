@@ -10,7 +10,7 @@ describe("battle plan", () => {
   it("puts the final review 2 days before the exam", () => {
     const final = buildPlan([]).filter((s) => s.kind === "final");
     expect(final).toHaveLength(1);
-    expect(final[0].day).toBe(DAYS_TO_EXAM - 2);
+    expect(final[0]!.day).toBe(DAYS_TO_EXAM - 2);
   });
   it("adds Gradient Descent drills when GD answers are wrong", () => {
     const weak = weakFromQuiz(wrongGD);
