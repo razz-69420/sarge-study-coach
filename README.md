@@ -35,6 +35,10 @@ npm run dev
 - [Lovable](https://lovable.dev): generated the UI and app code
 - [Claude](https://claude.com/claude-code): planning, prompts and repo setup
 
+## Presentation
+
+[Slides (PDF)](docs/presentation.pdf)
+
 ## License
 
 [MIT](LICENSE)
