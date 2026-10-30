@@ -26,9 +26,9 @@ function QuizPage() {
   const [conf, setConf] = useState<number | null>(null);
   const [hint, setHint] = useState(false);
   const [locked, setLocked] = useState<Answer | null>(null);
-  const [restarted, setRestarted] = useState(false);
+  const [restarted, setRestarted] = useState(!quizDone);
 
-  if (quizDone && !restarted) {
+  if (quizDone && !restarted && !locked) {
     const right = answers.filter((a) => a.correct).length;
     return (
       <div className="space-y-6">
@@ -50,7 +50,7 @@ function QuizPage() {
     setAnswers([...answers.filter((x) => x.qid !== q.id), a]);
   };
   const next = () => {
-    if (i === QUESTIONS.length - 1) { setRestarted(false); navigate({ to: "/debrief" }); return; }
+    if (i === QUESTIONS.length - 1) { navigate({ to: "/debrief" }); return; }
     setI(i + 1); setChoice(null); setConf(null); setHint(false); setLocked(null);
   };
 
