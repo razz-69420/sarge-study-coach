@@ -80,7 +80,7 @@ function Dashboard() {
               style={{ height: `${30 + ((k * 37) % 70)}%`, animationDelay: `${(k % 8) * 0.1}s`, transform: playing ? undefined : "scaleY(0.25)" }} />
           ))}
         </div>
-        <div className="label-tag shrink-0">{playing ? "0:0" + Math.min(9, 1) + " / 1:30" : "1:30 · preview"}</div>
+        <div className="label-tag shrink-0">{playing ? "Playing · 1:30" : "1:30 · preview"}</div>
       </div>
       {playing && <SargeSays>Twelve days, recruit. {weak[0] ?? "Nothing"} is the soft spot. We drill it until it isn't.</SargeSays>}
     </div>
