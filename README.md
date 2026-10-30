@@ -4,6 +4,8 @@ A study coach for AI Bachelor students at JKU Linz, with a strict but funny dril
 
 **Status: clickable demo.** It runs on fictional course data. It does not read real files, call an AI model or play real audio yet.
 
+**Live demo:** https://sarge-study-coach.vercel.app
+
 ## What the Demo Shows
 
 1. **Enlistment:** six onboarding questions
